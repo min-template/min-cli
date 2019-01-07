@@ -20,7 +20,6 @@ let questions = [{
 inquirer
   .prompt(questions)
   .then(answers => {
-    console.log(answers)
     let name = answers.name
     if (name && !fs.existsSync(name)) {
       downloadGitRepo('min-template/' + answers.type, name, function (err) {

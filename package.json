@@ -1,13 +1,13 @@
 {
-  "name": "min-cli",
-  "version": "1.0.0",
+  "name": "minjs-cli",
+  "version": "1.0.1",
   "description": "webpack cli",
   "main": "index.js",
   "repository": "git@github.com:min-template/min-cli.git",
   "author": "303890562@qq.com",
   "license": "MIT",
   "bin": {
-    "min": "./src/index.js"
+    "min": "./bin/min"
   },
   "dependencies": {
     "commander": "^2.19.0",

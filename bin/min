@@ -11,7 +11,7 @@ program
   .command('init')
   .description('create a webpack project')
   .action(function () {
-    require('./init')
+    require('./min-init')
   })
 
 program.parse(process.argv)
