@@ -14,7 +14,7 @@ let questions = [{
   type: 'list',
   name: 'type',
   message: 'Select a webpack type for your project?',
-  choices: ['h5', 'react', 'vue', 'pixi']
+  choices: ['h5', 'react', 'vue']
 }]
 
 inquirer
