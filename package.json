@@ -1,0 +1,16 @@
+{
+  "name": "min-cli",
+  "version": "1.0.0",
+  "description": "webpack cli",
+  "main": "./src/index.js",
+  "author": "303890562@qq.com",
+  "license": "MIT",
+  "bin": {
+    "min": "./src/index.js"
+  },
+  "dependencies": {
+    "commander": "^2.19.0",
+    "download-git-repo": "^1.1.0",
+    "inquirer": "^6.2.1"
+  }
+}

@@ -1,0 +1,34 @@
+const inquirer = require('inquirer')
+const downloadGitRepo = require('download-git-repo')
+const fs = require('fs')
+
+console.log('init command')
+
+let questions = [{
+  type: 'input',
+  name: 'name',
+  message: 'Entry a name for your project?',
+  default: 'app'
+},
+{
+  type: 'list',
+  name: 'type',
+  message: 'Select a webpack type for your project?',
+  choices: ['h5', 'react', 'vue', 'pixi']
+}]
+
+inquirer
+  .prompt(questions)
+  .then(answers => {
+    console.log(answers)
+    let name = answers.name
+    if (name && !fs.existsSync(name)) {
+      downloadGitRepo('min-template/' + answers.type, name, function (err) {
+        if (err) {
+          console.log(err)
+        }
+      })
+    } else {
+      console.log(name + ' is already exists')
+    }
+  })
